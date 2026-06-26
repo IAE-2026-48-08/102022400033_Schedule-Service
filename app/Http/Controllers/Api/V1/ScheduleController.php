@@ -24,27 +24,31 @@ class ScheduleController extends Controller
     }
 
     public function show($id)
-    {
-        $schedule = Schedule::find($id);
+{
+    $schedule = Schedule::find($id);
 
-        if (!$schedule) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Resource not found',
-                'errors' => null
-            ], 404);
-        }
-
+    if (!$schedule) {
         return response()->json([
-            'status' => 'success',
-            'message' => 'Data retrieved successfully',
-            'data' => $schedule,
+            'status' => 'error',
+            'message' => 'Resource not found',
+            'data' => null,
             'meta' => [
                 'service_name' => 'Schedule-Service',
                 'api_version' => 'v1'
             ]
-        ], 200);
+        ], 404);
     }
+
+    return response()->json([
+        'status' => 'success',
+        'message' => 'Data retrieved successfully',
+        'data' => $schedule,
+        'meta' => [
+            'service_name' => 'Schedule-Service',
+            'api_version' => 'v1'
+        ]
+    ], 200);
+}
 
     public function store(Request $request)
     {
