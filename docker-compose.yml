@@ -1,6 +1,10 @@
 services:
   app:
+    container_name: Schedule-Service
     build: .
-    container_name: schedule-service
     ports:
       - "8000:8000"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - APP_ENV=local
