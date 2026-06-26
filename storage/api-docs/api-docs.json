@@ -55,11 +55,11 @@
                                 "properties": {
                                     "vehicle_id": {
                                         "type": "integer",
-                                        "example": 101
+                                        "example": 911
                                     },
                                     "driver_id": {
                                         "type": "integer",
-                                        "example": 201
+                                        "example": 139
                                     },
                                     "destination": {
                                         "type": "string",

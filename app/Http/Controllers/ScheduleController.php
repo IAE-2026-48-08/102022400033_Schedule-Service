@@ -104,8 +104,8 @@ class ScheduleController extends Controller
                     "purpose"
                 ],
                 properties: [
-                    new OA\Property(property: "vehicle_id", type: "integer", example: 101),
-                    new OA\Property(property: "driver_id", type: "integer", example: 201),
+                    new OA\Property(property: "vehicle_id", type: "integer", example: 911),
+                    new OA\Property(property: "driver_id", type: "integer", example: 139),
                     new OA\Property(property: "destination", type: "string", example: "Bandung"),
                     new OA\Property(property: "departure_date", type: "string", example: "2026-06-15"),
                     new OA\Property(property: "return_date", type: "string", example: "2026-06-17"),
